@@ -1,0 +1,37 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+
+const experienceData = [
+  {
+    title: "Desarrollador de Automatización de Procesos",
+    company: "Servicios Nutresa",
+    date: "Agosto 2024 - Febrero 2025",
+    description: "Se diseñaron e implementaron soluciones tecnológicas para automatizar procesos internos y mejorar la eficiencia operativa. Las herramientas utilizadas incluyeron Google Apps Script, AppSheet y UiPath Studio. Se realizó análisis de necesidades, desarrollo de scripts personalizados y coordinación con equipos multidisciplinarios y proveedores externos."
+  }
+];
+---
+<section class="experience-section">
+  <h2>Experiencia Profesional</h2>
+  {experienceData.map(exp => (
+    <ExperienceItem 
+      title={exp.title}
+      company={exp.company}
+      date={exp.date}
+      description={exp.description}
+    />
+  ))}
+</section>
+
+<style>
+  .experience-section {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+  }
+</style>
