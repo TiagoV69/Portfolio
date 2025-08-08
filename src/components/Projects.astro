@@ -1,0 +1,67 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const projectsData = [
+  {
+    slug: "api-todo-list",
+    title: "API REST de Lista de Tareas",
+    description: "API REST funcional con Spring Boot para gestionar tareas (CRUD), demostrando conceptos de backend, arquitectura en capas y persistencia con JPA.",
+    tech: ["Java", "Spring Boot", "JPA", "H2"],
+    link: "https://github.com/TiagoV69/To-do-list.git"
+  },
+  {
+    slug: "ecommerce-spring",
+    title: "E-commerce Robusto con Spring Security",
+    description: "Proyecto de e-commerce con registro, login (JWT), gestión de productos y pedidos, aplicando seguridad a nivel de API y lógica de negocio transaccional.",
+    tech: ["Spring Security", "JWT", "MySQL", "JPA"],
+    link: "https://github.com/TiagoV69/Shop.git"
+  },
+  {
+    slug: "url-shortener",
+    title: "Microservicio Acortador de URLs",
+    description: "Servicio de alto rendimiento que genera enlaces cortos. Demuestra diseño de microservicios, API RESTful, manejo de errores y documentación con Swagger.",
+    tech: ["Microservicios", "SpringDoc", "Swagger", "H2"],
+    link: "https://github.com/TiagoV69/URLs-Shortener.git"
+  },
+  {
+    slug: "finance-tracker-api",
+    title: "API para Gestor de Finanzas Personales",
+    description: "API RESTful segura y 'dockerizada' para una app de finanzas, con autenticación JWT, gestión de usuarios y operaciones financieras.",
+    tech: ["Docker", "PostgreSQL", "JWT", "Spring Boot"],
+    link: "https://github.com/TiagoV69/Personal-Finance-Tracker.git"
+  }
+];
+---
+<section class="projects-section">
+  <h2>Mis Proyectos</h2>
+  <div class="projects-grid">
+    {projectsData.map(project => (
+      <ProjectCard
+        slug={project.slug}
+        title={project.title}
+        description={project.description}
+        tech={project.tech}
+        link={project.link}
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+  }
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+</style>

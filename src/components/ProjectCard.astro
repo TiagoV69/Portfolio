@@ -1,0 +1,68 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tech: string[];
+  link: string;
+  slug: string;
+}
+
+const { title, description, tech, link, slug } = Astro.props;
+---
+<div class="project-card">
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <div class="tech-tags">
+    {tech.map((tag) => <span class="tag">{tag}</span>)}
+  </div>
+  <div class="links">
+    <a href={`/proyectos/${slug}`} class="details-link">Ver detalles</a>
+    <a href={link} target="_blank" rel="noopener noreferrer" class="repo-link">Código en GitHub</a>
+  </div>
+</div>
+
+<style>
+  .project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  h3 { margin-top: 0; }
+  p { flex-grow: 1; }
+  .tech-tags {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .tag {
+    background-color: #eef;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  .details-link, .repo-link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  .details-link {
+    background-color: #0077b5;
+    color: white;
+  }
+  .repo-link {
+    border: 1px solid #0077b5;
+    color: #0077b5;
+  }
+</style>
