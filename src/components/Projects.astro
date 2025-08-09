@@ -57,11 +57,22 @@ const projectsData = [
     font-size: 2rem;
     margin-bottom: 2rem;
   }
+  
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
+    
+    /* Por defecto (móviles): una sola columna */
+    grid-template-columns: 1fr; 
+  }
+
+  /* Cuando la pantalla tenga al menos 768px de ancho (tablets/escritorio)... */
+  @media (min-width: 768px) {
+    .projects-grid {
+      /* ...cambiamos a un diseño de dos columnas iguales */
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
