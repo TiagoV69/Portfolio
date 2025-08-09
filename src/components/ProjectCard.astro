@@ -29,12 +29,15 @@ const { title, description, tech, link, slug } = Astro.props;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    min-height: 350px; 
-  
-  h3 { margin-top: 0; }
-  
+    min-height: 350px;
+  }
+
+  h3 { 
+    margin-top: 0; 
+  }
+
   p { 
-    flex-grow: 1; /* Le dice al párrafo que ocupe todo el espacio vertical extra */
+    flex-grow: 1; 
     margin-bottom: 1rem;
   }
 
@@ -44,27 +47,32 @@ const { title, description, tech, link, slug } = Astro.props;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
+
   .tag {
     background-color: #eef;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
   }
+
   .links {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto; /* Empuja los enlaces al final */
+    margin-top: auto;
   }
+
   .details-link, .repo-link {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
   }
+
   .details-link {
     background-color: #0077b5;
     color: white;
   }
+
   .repo-link {
     border: 1px solid #0077b5;
     color: #0077b5;
