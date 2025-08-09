@@ -1,27 +1,10 @@
 ---
 const { title, company, date, description } = Astro.props;
 ---
-<div class="experience-item">
-  <h3>{title} <span class="company">@ {company}</span></h3>
-  <p class="date">{date}</p>
-  <p class="description">{description}</p>
-</div>
 
-<style>
-  .experience-item {
-    border-left: 2px solid #0077b5;
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  .company {
-    color: #0077b5;
-  }
-  .date {
-    font-style: italic;
-    color: #666;
-    margin-bottom: 0.5rem;
-  }
-  .description {
-    line-height: 1.6;
-  }
-</style>
+<div class="relative border-l-2 border-sky-700 pl-10 pb-10">
+  <div class="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full bg-sky-700"></div>
+  <h3 class="text-xl font-bold text-slate-800">{title} <span class="text-sky-800 font-normal">@ {company}</span></h3>
+  <p class="text-sm text-slate-500 mb-2">{date}</p>
+  <p class="text-slate-700 leading-relaxed">{description}</p>
+</div>

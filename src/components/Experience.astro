@@ -10,28 +10,19 @@ const experienceData = [
   }
 ];
 ---
-<section class="experience-section">
-  <h2>Experiencia Profesional</h2>
-  {experienceData.map(exp => (
-    <ExperienceItem 
-      title={exp.title}
-      company={exp.company}
-      date={exp.date}
-      description={exp.description}
-    />
-  ))}
+<section class="py-32 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-slate-900 mb-16 text-center">Experiencia Profesional</h2>
+    
+    <div class="[&>*:last-child]:pb-0">
+      {experienceData.map(exp => (
+        <ExperienceItem 
+          title={exp.title}
+          company={exp.company}
+          date={exp.date}
+          description={exp.description}
+        />
+      ))}
+    </div>
+  </div>
 </section>
-
-<style>
-  .experience-section {
-    padding: 2rem 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #333;
-    text-align: center;
-  }
-</style>
