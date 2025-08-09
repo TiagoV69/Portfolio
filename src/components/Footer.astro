@@ -1,0 +1,44 @@
+---
+const linkedinUrl = "https://www.linkedin.com/in/tiago-varela23/";
+const githubUrl = "https://github.com/TiagoV69";
+const email = "santyvarela.03@gmail.com";
+const currentYear = new Date().getFullYear();
+---
+<footer>
+  <div class="social-links">
+    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <span>&bull;</span>
+    <a href={githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+    <span>&bull;</span>
+    <a href={`mailto:${email}`}>Correo</a>
+  </div>
+  <p class="copyright">
+    © {currentYear} Santiago Varela Jimenez. Todos los derechos reservados.
+  </p>
+</footer>
+
+<style>
+  footer {
+    background-color: #f1f1f1;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 4rem; 
+  }
+  .social-links {
+    margin-bottom: 1rem;
+  }
+  .social-links a {
+    margin: 0 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  .copyright {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+  }
+</style>
