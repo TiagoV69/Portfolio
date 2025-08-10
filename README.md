@@ -1,46 +1,38 @@
-# Astro Starter Kit: Basics
+# Portafolio Personal de Santiago Varela Jimenez
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Bienvenido al repositorio de mi portafolio personal! Este proyecto fue construido desde cero con Astro y Tailwind CSS para mostrar mis habilidades, experiencia y proyectos como Tecnólogo en Desarrollo de Software.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+** Ver el sitio en vivo:** [**portafolio.santiagovarela.dev**](https://portfolio-lilac-one-h49mgs9xke.vercel.app/)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## Sobre el Proyecto
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Este no es solo un sitio web, es una aplicación web estática de alto rendimiento construida siguiendo las mejores prácticas modernas. El objetivo era crear un portafolio rápido, accesible, totalmente responsive y fácil de mantener.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Características
 
-## 🧞 Commands
+- **Construido con Astro:** Aprovechando la arquitectura de "cero JavaScript por defecto" para una velocidad de carga inmejorable.
+- **Estilizado con Tailwind CSS:** Un diseño moderno y consistente implementado con un enfoque "utility-first".
+- **Componentes Modulares:** Cada sección de la página es un componente de Astro reutilizable.
+- **Páginas Dinámicas:** La sección de proyectos genera páginas de detalle automáticamente a partir de un conjunto de datos.
+- **Despliegue Continuo:** Integrado con Vercel para actualizaciones automáticas en cada `push` a la rama `main`.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Construido Con
 
-## 👀 Want to learn more?
+- ![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+- ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## Cómo Empezar
+
+Si quieres clonar este proyecto y ejecutarlo localmente, sigue estos pasos:
+
+1. **Clona el repositorio**
+   ```sh
+   git clone https://github.com/TiagoV69/portafolio-astro.git
