@@ -3,95 +3,102 @@ import Layout from '../../layouts/Layout.astro'; // Uso un Layout para la estruc
 
 export async function getStaticPaths() {
 
-  const allProjects = [
-    {
-      slug: "api-todo-list",
-      title: "API REST de Lista de Tareas (To-Do List)",
-      githubLink: "https://github.com/TiagoV69/To-do-list.git",
-      content: `
-        <p>Este proyecto es una API REST completamente funcional desarrollada con Spring Boot y Java. Su propósito es gestionar una lista de tareas pendientes (To-Do List) a través de endpoints que soportan las operaciones CRUD (Crear, Leer, Actualizar y Eliminar).</p>
-        <p>Como mi primer proyecto utilizando el ecosistema de Spring, su objetivo principal es demostrar la comprensión y aplicación de los conceptos fundamentales del desarrollo de aplicaciones backend modernas.</p>
-        <h2>🚀 Características Principales</h2>
-        <ul>
-          <li>Crear una nueva tarea (POST /api/tasks).</li>
-          <li>Obtener la lista completa de todas las tareas (GET /api/tasks).</li>
-          <li>Obtener una tarea específica por su ID (GET /api/tasks/{id}).</li>
-          <li>Actualizar y eliminar tareas.</li>
-        </ul>
-        <h2>🛠️ Tecnologías y Herramientas</h2>
-        <ul>
-          <li>Lenguaje: Java 17</li>
-          <li>Framework: Spring Boot 3 (Spring Web, Spring Data JPA)</li>
-          <li>Base de Datos: H2 Database (en memoria)</li>
-          <li>Gestor de Dependencias: Maven</li>
-        </ul>
-      `
-    },
-    {
-      slug: "ecommerce-spring",
-      title: "E-commerce Robusto con Spring Security",
-      githubLink: "https://github.com/TiagoV69/Shop.git",
-      content: `
-        <p>Un proyecto de e-commerce robusto y profesional, enfocado en la seguridad y la lógica de negocio real. Cubre desde la configuración inicial hasta la documentación.</p>
-        <h2>✨ Hitos del Proyecto</h2>
-        <ul>
-            <li><strong>Módulo de Seguridad y Usuarios:</strong> Implementación de registro y login con Spring Security y JWT para proteger la API.</li>
-            <li><strong>Módulo de Productos:</strong> CRUD completo para productos con autorización basada en roles (solo ADMIN puede modificar).</li>
-            <li><strong>Módulo de Pedidos:</strong> Lógica de negocio transaccional (@Transactional) para validar stock, calcular totales y asegurar la integridad de los datos.</li>
-            <li><strong>Documentación:</strong> Generación automática de documentación interactiva con OpenAPI (Swagger).</li>
-        </ul>
-        <h2>🛠️ Tecnologías y Herramientas</h2>
-        <ul>
-            <li>Framework: Spring Boot (Security, JPA, Web)</li>
-            <li>Tokens: JSON Web Tokens (JWT)</li>
-            <li>Base de Datos: MySQL</li>
-            <li>Documentación: SpringDoc OpenAPI</li>
-        </ul>
-      `
-    },
-    {
-      slug: "url-shortener",
-      title: "Microservicio Acortador de URLs",
-      githubLink: "https://github.com/TiagoV69/URLs-Shortener.git",
-      content: `
-        <p>Microservicio de alto rendimiento diseñado para cumplir una única responsabilidad: tomar una URL larga y generar un enlace corto y único. Es una demostración de arquitectura de microservicios, diseño de API RESTful y código resiliente.</p>
-        <h2>✨ Características Principales</h2>
-        <ul>
-            <li><strong>API REST para Acortamiento:</strong> Endpoint POST para crear enlaces cortos.</li>
-            <li><strong>Redirección Automática:</strong> Endpoint GET /{shortCode} que redirige a la URL original.</li>
-            <li><strong>Validación Profesional:</strong> Rechaza URLs inválidas con errores 400 Bad Request.</li>
-            <li><strong>Manejo de Excepciones Centralizado:</strong> Uso de @ControllerAdvice para errores consistentes (ej: 404 Not Found).</li>
-            <li><strong>Documentación Interactiva (Swagger):</strong> API completamente documentada y probable desde el navegador.</li>
-        </ul>
-        <h2>🛠️ Tecnologías y Herramientas</h2>
-        <ul>
-            <li>Framework: Spring Boot 3 (Web, Data JPA, Validation)</li>
-            <li>Base de Datos: H2 Database</li>
-            <li>Utilidades: Lombok, SpringDoc OpenAPI</li>
-        </ul>
-      `
-    },
-    {
-      slug: "finance-tracker-api",
-      title: "API para Gestor de Finanzas Personales",
-      githubLink: "https://github.com/TiagoV69/Personal-Finance-Tracker.git",
-      content: `
-        <p>Una API RESTful robusta y segura para una aplicación de gestión de finanzas personales, con un fuerte enfoque en la seguridad, la escalabilidad y un entorno de desarrollo moderno y "dockerizado".</p>
-        <h2>✨ Características Principales</h2>
-        <ul>
-            <li><strong>Módulo de Seguridad Completo:</strong> Registro, login con hashing BCrypt y autenticación stateless con JWT.</li>
-            <li><strong>Módulo de Gestión Financiera:</strong> Modelo de datos para categorías y transacciones asociadas a cada usuario.</li>
-            <li><strong>Entorno Dockerizado:</strong> Usa Docker & Docker Compose para un entorno de desarrollo reproducible y aislado, incluyendo la base de datos PostgreSQL.</li>
-        </ul>
-        <h2>🛠️ Pila Tecnológica</h2>
-        <ul>
-            <li>Backend: Java 17, Spring Boot 3, Spring Security, JWT</li>
-            <li>Base de Datos: PostgreSQL (gestionada con Docker)</li>
-            <li>DevOps: Docker, Docker Compose, Maven</li>
-        </ul>
-      `
-    }
-  ];
+const allProjects = [
+  {
+    slug: "api-todo-list",
+    title: "API REST de Lista de Tareas (To-Do List)",
+    githubLink: "https://github.com/TiagoV69/To-do-list.git",
+    content: `
+      <p>API REST completamente funcional desarrollada con Spring Boot y Java para gestionar una lista de tareas pendientes mediante operaciones CRUD.</p>
+      <h2>🎯 Objetivo del Proyecto</h2>
+      <p>Demostrar la comprensión y aplicación de conceptos fundamentales en el desarrollo backend moderno usando el ecosistema Spring.</p>
+      <h2>🚀 Características Principales</h2>
+      <ul>
+        <li>Crear una nueva tarea (POST /api/tasks).</li>
+        <li>Listar todas las tareas (GET /api/tasks).</li>
+        <li>Obtener una tarea por ID (GET /api/tasks/{id}).</li>
+        <li>Actualizar y eliminar tareas existentes.</li>
+      </ul>
+      <h2>🛠️ Tecnologías y Herramientas</h2>
+      <ul>
+        <li>Lenguaje: Java 17</li>
+        <li>Framework: Spring Boot 3 (Spring Web, Spring Data JPA)</li>
+        <li>Base de Datos: H2 (en memoria)</li>
+        <li>Gestor de Dependencias: Maven</li>
+      </ul>
+    `
+  },
+  {
+    slug: "ecommerce-spring",
+    title: "E-commerce Robusto con Spring Security",
+    githubLink: "https://github.com/TiagoV69/Shop.git",
+    content: `
+      <p>Plataforma de e-commerce robusta, con autenticación segura, gestión de productos y pedidos, y documentación de API.</p>
+      <h2>🎯 Objetivo del Proyecto</h2>
+      <p>Implementar un sistema de comercio electrónico con seguridad a nivel de API, autorización por roles y lógica de negocio transaccional.</p>
+      <h2>🚀 Características Principales</h2>
+      <ul>
+        <li>Registro y login con Spring Security y JWT.</li>
+        <li>Gestión de productos con autorización basada en roles (solo ADMIN edita).</li>
+        <li>Procesamiento de pedidos con validación de stock y cálculo de totales.</li>
+        <li>Documentación automática con OpenAPI (Swagger).</li>
+      </ul>
+      <h2>🛠️ Tecnologías y Herramientas</h2>
+      <ul>
+        <li>Framework: Spring Boot (Security, JPA, Web)</li>
+        <li>Tokens: JSON Web Tokens (JWT)</li>
+        <li>Base de Datos: MySQL</li>
+        <li>Documentación: SpringDoc OpenAPI</li>
+      </ul>
+    `
+  },
+  {
+    slug: "url-shortener",
+    title: "Microservicio Acortador de URLs",
+    githubLink: "https://github.com/TiagoV69/URLs-Shortener.git",
+    content: `
+      <p>Microservicio de alto rendimiento para acortar URLs largas en enlaces cortos y únicos, con validación y documentación integrada.</p>
+      <h2>🎯 Objetivo del Proyecto</h2>
+      <p>Demostrar arquitectura de microservicios, diseño de API RESTful y buenas prácticas de manejo de errores.</p>
+      <h2>🚀 Características Principales</h2>
+      <ul>
+        <li>Acortamiento de URLs vía endpoint POST.</li>
+        <li>Redirección automática mediante código corto.</li>
+        <li>Validación de URLs con respuestas de error apropiadas.</li>
+        <li>Manejo centralizado de excepciones con @ControllerAdvice.</li>
+        <li>Documentación interactiva con Swagger.</li>
+      </ul>
+      <h2>🛠️ Tecnologías y Herramientas</h2>
+      <ul>
+        <li>Framework: Spring Boot 3 (Web, Data JPA, Validation)</li>
+        <li>Base de Datos: H2</li>
+        <li>Utilidades: Lombok, SpringDoc OpenAPI</li>
+      </ul>
+    `
+  },
+  {
+    slug: "finance-tracker-api",
+    title: "API para Gestor de Finanzas Personales",
+    githubLink: "https://github.com/TiagoV69/Personal-Finance-Tracker.git",
+    content: `
+      <p>API RESTful segura y dockerizada para la gestión de finanzas personales, con autenticación JWT y operaciones financieras personalizadas.</p>
+      <h2>🎯 Objetivo del Proyecto</h2>
+      <p>Crear una API escalable y segura para manejar transacciones financieras por usuario, con un entorno de desarrollo moderno.</p>
+      <h2>🚀 Características Principales</h2>
+      <ul>
+        <li>Registro y login con hashing BCrypt y JWT.</li>
+        <li>Modelo de datos para categorías y transacciones.</li>
+        <li>Entorno dockerizado con PostgreSQL y Docker Compose.</li>
+      </ul>
+      <h2>🛠️ Tecnologías y Herramientas</h2>
+      <ul>
+        <li>Backend: Java 17, Spring Boot 3, Spring Security, JWT</li>
+        <li>Base de Datos: PostgreSQL</li>
+        <li>DevOps: Docker, Docker Compose, Maven</li>
+      </ul>
+    `
+  }
+];
 
   // Esta función le dice a Astro qué páginas construir.
   return allProjects.map(project => ({
