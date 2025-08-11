@@ -27,15 +27,27 @@ const { title } = Astro.props;
     @tailwind components;
     @tailwind utilities;
 
-    body {
-        font-family: system-ui, sans-serif;
-        background: #fff;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
+    .animated-gradient {
+        background: linear-gradient(
+            -45deg, 
+            #e0f2fe, 
+            #38bdf8, 
+            #4338ca, 
+            #1e293b
+        );
+        background-size: 400% 400%;
+        animation: gradient-animation 15s ease infinite;
     }
-    main {
-        flex-grow: 1;
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 </style>
